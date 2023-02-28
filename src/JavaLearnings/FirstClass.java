@@ -1,5 +1,6 @@
 package JavaLearnings;
 
+import java.util.Scanner;
 import edu.duke.FileResource;
 
 public class FirstClass {
