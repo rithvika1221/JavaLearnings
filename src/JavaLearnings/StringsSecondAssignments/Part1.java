@@ -11,14 +11,18 @@ public class Part1 {
 
 	public int findStopCodon(String dna, int startIndex, String stopCodon) {
 		int Index = startIndex;
-		while (Index != -1) {
+		while (true) {
 			Index = dna.indexOf(stopCodon, Index +1);
 			if ((Index - startIndex) % 3 == 0) {
 				return Index;
 			} 
+			if(Index == -1)
+			{
+				return dna.length();
+			}
 		}
 
-		return dna.length();
+		//return dna.length();
 		
 	/*	int index = 0;
 
@@ -66,6 +70,7 @@ public class Part1 {
 
 	public void printAllGenes(String dna) {
 		int anscount = 0;
+		int maxlength = 0;
 		dna = dna.toUpperCase();
 		int position = 0;
 		while (true)
@@ -76,12 +81,15 @@ public class Part1 {
 			} else {
 				System.out.println(ans);
 				anscount++;
+				maxlength = Math.max(maxlength, ans.length());
 				position = dna.indexOf(ans, position) + ans.length();
 			}
 			
 
 		}
 		System.out.println(anscount);
+		System.out.println("Max length:");
+		System.out.println(maxlength);
 	}
 
 	public StorageResource getAllGenes(String dna) {
@@ -98,6 +106,7 @@ public class Part1 {
 				break;
 			} else {
 				genes.add(ans);
+				
 				if ((dnaSub.indexOf(ans) + ans.length()) < dnaSub.length()) {
 					dnaSub = dnaSub.substring(dnaSub.indexOf(ans) + ans.length());
 				}
@@ -220,7 +229,7 @@ public class Part1 {
 		// obj1.testgetAllGenes();
 		// System.out.println(obj1.countAllGenes("ATGTAAATGTGAATGTAG"));
 		// System.out.println(obj1.cgRatio("ATGCCATAG"));
-		// obj1.testProcessGenes();
+		 //obj1.testProcessGenes();
 
 	}
 
