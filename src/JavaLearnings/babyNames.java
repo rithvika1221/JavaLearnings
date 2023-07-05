@@ -191,8 +191,8 @@ public class babyNames {
        // bn.totalBirths(fr);
         
 
-       //int rank = bn.getRank(1971, "Frank", "M");
-       // System.out.println("Rank of the given name in 2012: " + rank);
+       //int rank = bn.getRank(1960, "Emily", "F");
+      // System.out.println("Rank of the given name in year: " + rank);
 
       // String name = bn.getName(1982, 450, "M");
        // System.out.println("Name at rank in year: " + name);
@@ -207,7 +207,7 @@ public class babyNames {
        // System.out.println("Average rank for name: " + averageRank);
        // 
      
-       int totalBirthsRankedHigher = bn.getTotalBirthsRankedHigher(1990, "Drew", "M");
+       int totalBirthsRankedHigher = bn.getTotalBirthsRankedHigher(1990, "Emily", "F");
        System.out.println("Total births ranked higher than Ethan (M) in 2012: " + totalBirthsRankedHigher);
     }
 }
