@@ -90,8 +90,8 @@
     	
     	public void testencryptTwoKeys() {
     		String input = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
-    		int key1 = 8;
-    		int key2 = 21;
+    		int key1 = 2;
+    		int key2 = 20;
     		String encryptedTwoKeys = encryptTwoKeys(input, key1, key2);
     		System.out.println(encryptedTwoKeys);
     	}
