@@ -1,5 +1,5 @@
 package JavaLearnings.StringsSecondAssignments;
-import JavaLearnings.Part3;
+import „;
 import edu.duke.*;
 
 public class Part1 {
